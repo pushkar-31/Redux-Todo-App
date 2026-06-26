@@ -1,0 +1,37 @@
+.todo-input{
+
+display:flex;
+
+gap:10px;
+
+margin-bottom:20px;
+
+}
+
+.todo-input input{
+
+flex:1;
+
+padding:10px;
+
+}
+
+.todo-input button{
+
+padding:10px 20px;
+
+cursor:pointer;
+
+}
+
+.todo-item{
+
+padding:12px;
+
+background:#f5f5f5;
+
+margin-bottom:10px;
+
+border-radius:6px;
+
+}
