@@ -1,19 +1,86 @@
+import { useDispatch } from "react-redux";
+
+import {
+
+deleteTodo,
+
+toggleTodo
+
+}
+
+from "../features/todo/todoSlice";
+
 import "../styles/Todo.css";
+
 function TodoItem({ todo }) {
 
-  return (
+const dispatch=
 
-    <div className="todo-item">
+useDispatch();
 
-      <span>
+return(
 
-        {todo.text}
+<div className="todo-item">
 
-      </span>
+<span
 
-    </div>
+className={
 
-  );
+todo.completed?
+
+"completed":""
+
+}
+
+>
+
+{todo.text}
+
+</span>
+
+<div>
+
+<button
+
+onClick={()=>dispatch(
+
+toggleTodo(todo.id)
+
+)}
+
+>
+
+{
+
+todo.completed?
+
+"Undo":
+
+"Complete"
+
+}
+
+</button>
+
+<button
+
+onClick={()=>dispatch(
+
+deleteTodo(todo.id)
+
+)}
+
+>
+
+Delete
+
+</button>
+
+</div>
+
+</div>
+
+)
 
 }
 
